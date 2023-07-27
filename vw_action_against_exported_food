@@ -1,0 +1,6 @@
+ SELECT hcci.action_taken,
+    count(hcci.action_taken) AS occurrence
+   FROM hcci
+  GROUP BY hcci.action_taken
+  ORDER BY (count(hcci.action_taken)) DESC
+ LIMIT 5;
